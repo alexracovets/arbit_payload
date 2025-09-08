@@ -23,5 +23,14 @@ export const Pages: CollectionConfig = {
       type: 'text',
       required: true,
     },
+    {
+      name: 'image',
+      type: 'relationship',
+      relationTo: 'media',
+      hasMany: false,
+      admin: {
+        description: 'The image of the page',
+      },
+    },
   ],
 }

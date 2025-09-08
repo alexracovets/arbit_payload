@@ -185,6 +185,10 @@ export interface Page {
     [k: string]: unknown;
   } | null;
   slug: string;
+  /**
+   * The image of the page
+   */
+  image?: (number | null) | Media;
   updatedAt: string;
   createdAt: string;
 }
@@ -301,6 +305,7 @@ export interface PagesSelect<T extends boolean = true> {
   title?: T;
   content?: T;
   slug?: T;
+  image?: T;
   updatedAt?: T;
   createdAt?: T;
 }
